@@ -1,7 +1,45 @@
-<img width="632" alt="Screen Shot 2020-02-05 at 1 01 16 PM" src="https://user-images.githubusercontent.com/56740477/73869678-c2a17e80-4818-11ea-9dbe-134b90d385ab.png">
-
-
 # Kangaroof
 
-Kangaroof is a Airbnb clone. 
+<img width="632" alt="Screen Shot 2020-02-05 at 1 01 16 PM" src="https://user-images.githubusercontent.com/56740477/73869678-c2a17e80-4818-11ea-9dbe-134b90d385ab.png">
+
+Kangaroof is an Airbnb clone. It offeres an online marketplace where users can arrange or offer homestays.
+
+## Features
+
+### New account creation, login, and guest/demo login
+* Users can sign up, sign in, log out
+* Users can use a demo login to try the site
+* Users can't use certain features without logging in (reserve spots & leave reviews)
+
+### Spots
+* has its own profile
+calendar that shows availability & allows Guests(users) to select dates
+Guests(users) can reserve and arrange dates on profile
+
+### Reservations
+Reservations are made on Spot's profile
+### Reviews
+Users(guests) can leave reviews
+Users have to log in to leave reviews
+Review count is displayed
+### User Profile
+shows simple information (public)
+shows reservations (private)
+shows spots if User is a host (public)
+### Messaging
+Only Users initiate messaging
+Hosts and Users can message each other
+
+## Pages
+
+## Page Details
+
+## Tables
+
+## Associations
+
+## Timeline
+
+-- created on Feb 3, 2020
+
 
