@@ -5,7 +5,7 @@
 Kangaroof is an Airbnb clone. It offeres an online marketplace where users can arrange or offer homestays.
 
 ## Features
-
+[MVP List](https://github.com/aracpyon/kangaroof/wiki/MVP-list)
 ### New account creation, login, and guest/demo login
 * Users can sign up, sign in, log out
 * Users can use a demo login to try the site
@@ -13,30 +13,36 @@ Kangaroof is an Airbnb clone. It offeres an online marketplace where users can a
 
 ### Spots
 * has its own profile
-calendar that shows availability & allows Guests(users) to select dates
-Guests(users) can reserve and arrange dates on profile
+* calendar that shows availability & allows Guests(users) to select dates
+* Guests(users) can reserve and arrange dates on profile
 
 ### Reservations
-Reservations are made on Spot's profile
+* Reservations are made on Spot's profile
+
 ### Reviews
-Users(guests) can leave reviews
-Users have to log in to leave reviews
-Review count is displayed
+* Users(guests) can leave reviews
+* Users have to log in to leave reviews
+* Review count is displayed
+
 ### User Profile
-shows simple information (public)
-shows reservations (private)
-shows spots if User is a host (public)
+* shows simple information (public)
+* shows reservations (private)
+* shows spots if User is a host (public)
+
 ### Messaging
-Only Users initiate messaging
-Hosts and Users can message each other
+* Only Users initiate messaging
+* Hosts and Users can message each other
 
-## Pages
+## Pages & Details
+ -- HomePage (index)
+  * nav: logo, login & logout buttons on nar
+  * Front Image
+  * Dates look up
+  * 
+ -- 
 
-## Page Details
-
-## Tables
-
-## Associations
+## Tables & Associations
+* [Schema](https://github.com/aracpyon/kangaroof/wiki/Schema)
 
 ## Timeline
 
