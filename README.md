@@ -1,24 +1,7 @@
-# README
+<img width="632" alt="Screen Shot 2020-02-05 at 1 01 16 PM" src="https://user-images.githubusercontent.com/56740477/73869678-c2a17e80-4818-11ea-9dbe-134b90d385ab.png">
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Kangaroof
 
-* Ruby version
+Kangaroof is a Airbnb clone. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
