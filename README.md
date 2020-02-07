@@ -6,30 +6,30 @@ Kangaroof is an Airbnb clone. It offeres an online marketplace where users can a
 
 ## Features
 [MVP List](https://github.com/aracpyon/kangaroof/wiki/MVP-list)
-### 1.New account creation, login, and guest/demo login
+### 1. New account creation, login, and guest/demo login
 * Users can sign up, sign in, log out
 * Users can use a demo login to try the site
 * Users can't use certain features without logging in (reserve spots & leave reviews)
 
-### 2.Pouches(rooms)
+### 2. Pouches(rooms)
 * has its own profile(host profile)
 * calendar that shows availability & allows Guests(users) to select dates
 * Guests(users) can reserve and arrange dates on profile
 
-### 3.Bookings
+### 3. Bookings
 * Reservations are made on Pouch's profile
 
-### 4.Reviews
+### 4. Reviews
 * Users(guests) can leave reviews
 * Users have to log in to leave reviews
 * Review count is displayed
 
-### 5.User Profile
+### 5. User Profile
 * shows simple information (public)
 * shows reservations (private)
 * shows spots if User is a host (public)
 
-### 6.Messaging
+### 6. Messaging
 * Only Users initiate messaging
 * Hosts and Users can message each other
 
