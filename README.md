@@ -39,7 +39,8 @@
   * Front Image
   * Dates look up
 ### -- Signup & Login Page
-### -- Kangaroo profile(Host profile that shows their guest rooms)
+### -- Kangaroo profile
+  * Host profile that shows their guest rooms
 
 ## Tables & Associations
 * [Schema](https://github.com/aracpyon/kangaroof/wiki/Schema)
