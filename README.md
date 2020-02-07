@@ -34,12 +34,12 @@
 * Hosts and Users can message each other
 
 ## Pages & Details
- -- HomePage (index)
+ ### -- HomePage (index)
   * nav: logo, login & logout buttons on nar
   * Front Image
   * Dates look up
--- Signup & Login Page
--- Kangaroo profile(Host profile that shows their guest rooms)
+### -- Signup & Login Page
+### -- Kangaroo profile(Host profile that shows their guest rooms)
 
 ## Tables & Associations
 * [Schema](https://github.com/aracpyon/kangaroof/wiki/Schema)
