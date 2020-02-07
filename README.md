@@ -2,7 +2,7 @@
 
 <img width="632" alt="Screen Shot 2020-02-05 at 1 01 16 PM" src="https://user-images.githubusercontent.com/56740477/73869678-c2a17e80-4818-11ea-9dbe-134b90d385ab.png">
 
-Kangaroof is an Airbnb clone. It offeres an online marketplace where users can arrange or offer homestays.
+Kangaroof is an Airbnb clone. It offeres an online marketplace where users can arrange or offer homestays. Hosts(kangaroo) post their guest rooms with the information of availability and price. Guests(joeys) look through the hosting list and find the best place for their taste and rent out the rooms. 
 
 ## Features
 [MVP List](https://github.com/aracpyon/kangaroof/wiki/MVP-list)
@@ -38,14 +38,13 @@ Kangaroof is an Airbnb clone. It offeres an online marketplace where users can a
   * nav: logo, login & logout buttons on nar
   * Front Image
   * Dates look up
-  * 
- -- 
+-- Signup & Login Page
+-- Kangaroo profile(Host profile that shows their guest rooms)
 
 ## Tables & Associations
 * [Schema](https://github.com/aracpyon/kangaroof/wiki/Schema)
 
 ## Timeline
-
 -- created on Feb 3, 2020
 
 
