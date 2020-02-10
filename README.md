@@ -5,7 +5,8 @@
 ```Kangaroof``` is an Airbnb clone. It offeres an online marketplace where users can arrange or offer homestays. Hosts(```kangaroo```) post their guest rooms with the information of availability and price. Guests(```joey```) look through the hosting list and find the best place for their taste and rent out the rooms. 
 
 ## sketch
-![kangaroof_sketch](https://user-images.githubusercontent.com/56740477/74114962-d9c6d000-4b7a-11ea-86d0-138c9844c14e.JPG)
+![kangaroof_sketch](https://user-images.githubusercontent.com/56740477/74115225-13e4a180-4b7c-11ea-9e09-1f510064038a.JPG)
+
 
 ## Features
 [MVP List](https://github.com/aracpyon/kangaroof/wiki/MVP-list)
