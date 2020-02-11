@@ -29,7 +29,7 @@ class User < ApplicationRecord
     bcrypted_password.is_password?(password)
   end
 
-  def reset_session_tojen!
+  def reset_session_token!
     self.session_token = self.class.generate_session_token
     self.save!
     self.session_token
@@ -37,7 +37,7 @@ class User < ApplicationRecord
 
   private
 
-  def ensure_session_token(password)
+  def ensure_session_token
     self.session_token ||= self.class.generate_session_token
   end
 
