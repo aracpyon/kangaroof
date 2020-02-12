@@ -91,7 +91,7 @@ class LoginForm extends React.Component {
             <br/>
             <div className="session-change">
               <div className="session-change-question">Don't have an account?</div>
-              <div className="session-button">{this.props.otherForm}</div>
+                <div className="session-button" onClick={() => this.props.clearErrors()}>{this.props.otherForm}</div>
             </div>
           </div>
           </form>
