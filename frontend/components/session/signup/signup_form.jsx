@@ -52,6 +52,10 @@ class SignupForm extends React.Component {
     
   }
 
+  clearErrors(){
+    return this.props.errors = [];
+  }
+
   render() {
     // debugger
     return (
@@ -98,7 +102,7 @@ class SignupForm extends React.Component {
           <div className="session-bottom">
             <div className="session-change">
               <div className="session-change-question">Already have an account?</div>
-              <div className="session-change-button">{this.props.otherForm}</div>
+                <div className="session-change-button" onClick={this.clearErrors} >{this.props.otherForm}</div>
             </div>
           </div>
         </form>
