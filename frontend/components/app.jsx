@@ -1,19 +1,20 @@
 import React from "react";
-import { Route } from 'react-router-dom';
-import GreetingContainer from './nav/greeting_container';
-import LoginFormContainer from './session/login_form_container';
-import SignupFormContainer from './session/signup_form_container';
+import { Route, Link } from 'react-router-dom';
+import { AuthRoute } from '../util/route_util';
 
+import GreetingContainer from './nav/greeting_container';
+import LoginFormContainer from './session/login/login_form_container';
+import SignupFormContainer from './session/signup/signup_form_container';
+import MainPage from '../components/main/main_page';
+import Modal from "./modal/modal"
 
 const App = () => (
   <div>
-    <header>
-      <h1>Kangaroof from App</h1>
-      <GreetingContainer />
-    </header>
-
-    <Route path="/login" component={LoginFormContainer} />
-    <Route path="/signup" component={SignupFormContainer} />
+    <Modal />
+    <GreetingContainer />
+    <MainPage />
+    {/* <AuthRoute path="/login" component={LoginFormContainer} />
+    <AuthRoute path="/signup" component={SignupFormContainer} /> */}
   </div>
 );
 

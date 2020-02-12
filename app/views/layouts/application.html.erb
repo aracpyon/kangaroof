@@ -5,10 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <script type="text/javascript">
+    window.logoURL = "<%= image_url('k_logo.png') %>";
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Overpass|Quicksand|Roboto|Sarabun&display=swap" rel="stylesheet">
   <body>
     <%= yield %>
   </body>

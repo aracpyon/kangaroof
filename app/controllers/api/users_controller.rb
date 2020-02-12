@@ -1,12 +1,15 @@
 class Api::UsersController < ApplicationController
   def create
-
+    # debugger
     @user = User.new(user_params)
 
-    if @user.save!
+    if @user.save
+      #you dont put ! when you are using custom errors
+      # ! errors come from database instead of controller
       login!(@user)
       render :show
     else
+      # debugger
       render json: @user.errors.full_messages, status: 401
     end
   end

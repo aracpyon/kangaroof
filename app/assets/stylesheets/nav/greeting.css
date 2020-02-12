@@ -1,0 +1,38 @@
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  /* flex-direction: row; */
+  justify-content: space-between;
+}
+
+.nav-left{
+  width: 500px;
+}
+.nav-left-contents {
+  padding: 24px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+
+
+  /* padding: 0px 50px */
+}
+
+.nav-contents{
+  font-family: 'Sarabun', sans-serif;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-contents:hover {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.logo-link {
+  margin-right: 100px;
+}
