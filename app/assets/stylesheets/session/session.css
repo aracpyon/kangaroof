@@ -43,9 +43,9 @@
   right: 0;
 }
 /* child container */
-.session-form{
-  /* padding: 20px; */
-}
+/* .session-form{
+  
+} */
 
 .session-input{
   border: none;
@@ -102,7 +102,7 @@
   font-size: 14px;
   font-weight: 400;
   text-decoration: underline;
-  padding: 0;
+  padding: 0px;
 }
 
 .session-errors-content {
@@ -110,4 +110,13 @@
   margin-left: 2px;
   color: red;
   font-size: 12px;
+}
+.errors {
+  border: 2px solid red;
+  background: #fff0f5;
+}
+
+.errors:focus-within {
+  border: 2px solid red;
+  background: transparent 
 }

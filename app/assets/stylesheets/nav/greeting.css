@@ -1,3 +1,9 @@
+button {
+  padding: 0;
+}
+.nav-bar, .nav-left, .nav-right {
+  height: 75px;
+}
 
 .nav-bar {
   display: flex;
@@ -10,8 +16,9 @@
   width: 500px;
 }
 .nav-left-contents {
-  padding: 24px;
+  padding: 25px;
   padding-right: 30px;
+  padding: 23px 30px 30px 25px;
   display: flex;
   justify-content: space-between;
 
@@ -26,13 +33,22 @@
   border: none;
   background: transparent;
   cursor: pointer;
+  box-sizing: border-box;
+  /* width: 60px; */
+  padding: 0;
+  color: black;
+  text-decoration: none;
 }
 
 .nav-contents:hover {
-  padding-bottom: 10px;
+  padding: 0px 0px 10px 0px;
   border-bottom: 1px solid black;
 }
 
 .logo-link {
   margin-right: 100px;
+}
+
+.logo{
+  padding: 20px;
 }

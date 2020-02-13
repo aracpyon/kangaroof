@@ -26,11 +26,11 @@ class SignupForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
-    this.setState({
-      email: "",
-      name: "",
-      password: ""
-    });
+    // this.setState({
+    //   email: "",
+    //   name: "",
+    //   password: ""
+    // });
     //clearing login information
   }
 
@@ -58,6 +58,13 @@ class SignupForm extends React.Component {
 
   render() {
     // debugger
+    let errors;
+    if (this.renderErrors() === null){
+      errors = "";
+    } else {
+      errors = "errors"
+    }
+
     return (
      <div className="session-container">
       <header className="session-head">
@@ -67,7 +74,7 @@ class SignupForm extends React.Component {
         <div className="session-form" >
           <form onSubmit={this.handleSubmit} className="signup-form">
             {this.renderErrors()}
-            <div className="input-border">
+            <div className={`input-border ${errors}`}>
               
               <input
                 className="session-input"
@@ -78,7 +85,7 @@ class SignupForm extends React.Component {
           
             </div>
           <br />
-            <div className="input-border" >
+            <div className={`input-border ${errors}`} >
             <input
                 className="session-input"
                 type="text"
@@ -88,7 +95,7 @@ class SignupForm extends React.Component {
                 />
           </div>
           <br />
-            <div className="input-border">
+            <div className={`input-border ${errors}`}>
             <input
                 className="session-input"
                 type="password"
@@ -102,7 +109,7 @@ class SignupForm extends React.Component {
           <div className="session-bottom">
             <div className="session-change">
               <div className="session-change-question">Already have an account?</div>
-                <div className="session-change-button" onClick={() => this.props.clearErrors()} >{this.props.otherForm}</div>
+                <div className="session-change-button" onClick={this.props.clearErrors.bind(this)} >{this.props.otherForm}</div>
             </div>
           </div>
         </form>

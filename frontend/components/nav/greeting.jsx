@@ -21,10 +21,10 @@ export default ({ currentUser, logout, openModal }) => {
 
   const noCurrentUser = () => (
     <nav className = "nav-left-contents" >
-      <div className="nav-contents">Fun</div>
-      <div className="nav-contents">gitHub</div>
-      <button className="nav-contents" onClick={() => openModal('signup')}>Sign up</button>
-      <button className="nav-contents" onClick={() => openModal('login')}>Log In</button>
+      <Link className="nav-contents" to="/spots" >Spots</Link>
+      <a className="nav-contents" href="https://github.com/aracpyon">gitHub</a>
+      <div className="nav-contents" onClick={() => openModal('signup')}>Sign up</div>
+      <div className="nav-contents" onClick={() => openModal('login')}>Log In</div>
     </nav >
   )
 
@@ -46,7 +46,13 @@ export default ({ currentUser, logout, openModal }) => {
 
   return (
     <div className="nav-bar">
-      <img className="logo" src={window.logoURL} />
+      {/* <div className="main-page-image">
+
+      </div> */}
+      <Link className="nav-right" to="/"><img className="logo" src={window.logoURL} /></Link>
+      <div className="nav-right">
+        <input type="text" value="Try Paris"/>
+      </div>
       <div className="nav-left">
         {render}  
 

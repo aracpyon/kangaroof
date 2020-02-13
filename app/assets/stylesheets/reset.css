@@ -1,0 +1,12 @@
+button, div, li, ul, body {
+  
+  box-sizing: border-box;
+  font-size: 16px;
+  /* font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Overpass', sans-serif; */
+  /* width: 100%; */
+  font-family: 'Sarabun', sans-serif;
+}
+

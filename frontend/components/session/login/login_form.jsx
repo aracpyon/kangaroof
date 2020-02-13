@@ -51,6 +51,13 @@ class LoginForm extends React.Component {
   }
 
   render() {
+    let errors;
+    if (this.renderErrors() === null) {
+      errors = "";
+    } else {
+      errors = "errors"
+    }
+
     return (
       <div className="session-container">
         <header className="session-head">
@@ -63,7 +70,7 @@ class LoginForm extends React.Component {
         <div className="session-form">
           <form onSubmit={this.handleSubmit} className="login-form">
              {this.renderErrors()}
-            <div className="input-border" >
+            <div className={`input-border ${errors}`} >
               <input
                 className="session-input"
                 type="text"
@@ -73,7 +80,7 @@ class LoginForm extends React.Component {
                  />
             </div>
             <br />
-            <div className="input-border" >
+            <div className={`input-border ${errors}`} >
               <input
                 className="session-input"
                 type="password"
