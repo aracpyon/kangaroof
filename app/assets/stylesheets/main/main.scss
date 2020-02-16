@@ -1,13 +1,17 @@
-.main-page-image {
-  background-image: image-url('paris.jpg');
-  width: 100%;
-  height: 100vh; 
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  margin: auto;
+// .main-page-image {
+//   background-image: image-url('paris.jpg');
+//   width: 100%;
+//   height: 100vh; 
+//   background-size: 100% 100%;
+//   background-repeat: no-repeat;
+//   margin: auto;
   
   
-  // object-fit: cover;
+//   // object-fit: cover;
+// }
+
+.splash-photowall {
+  width: 100vw;
 }
 .main-page{
   display: flex;

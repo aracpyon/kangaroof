@@ -31,15 +31,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aracpyon/MyBnb.git"
+    "url": "git+https://github.com/aracpyon/kangaroof.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aracpyon/MyBnb/issues"
+    "url": "https://github.com/aracpyon/kangaroof/issues"
   },
-  "homepage": "https://github.com/aracpyon/MyBnb#readme",
+  "homepage": "https://github.com/aracpyon/kangaroof#readme",
   "engines": {
     "node": "10.13.0",
     "npm": "6.4.1"

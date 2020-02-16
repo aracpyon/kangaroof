@@ -4,8 +4,11 @@ import SpotProfile from './spot_profile';
 
 const mSTP = (state, ownProps) => {
   // debugger
+  const spot = state.entities.spots[ownProps.match.params.spotId]
+  // debugger
   return {
-    spot: state.entities.spots[ownProps.match.params.spotId]
+    spot: spot
+    // host: state.entities.users[spot.host_id]
   }
 }
 

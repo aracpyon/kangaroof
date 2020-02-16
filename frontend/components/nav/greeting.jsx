@@ -20,19 +20,19 @@ export default ({ currentUser, logout, openModal }) => {
   // )
 
   const noCurrentUser = () => (
-    <nav className = "nav-left-contents" >
-      <Link className="nav-contents" to="/spots" >Spots</Link>
-      <a className="nav-contents" href="https://github.com/aracpyon">gitHub</a>
-      <div className="nav-contents" onClick={() => openModal('signup')}>Sign up</div>
-      <div className="nav-contents" onClick={() => openModal('login')}>Log In</div>
+    <nav className = "nav-right-contents" >
+      <div className="nav-contents-div"><Link className="nav-contents" to="/spots" ><div className="nav-buttons">Spots</div></Link></div>
+      <div className="nav-contents-div"><a className="nav-contents" href="https://github.com/aracpyon"><div className="nav-buttons">GitHub</div></a></div>
+      <div className="nav-contents-div"><div className="nav-contents" onClick={() => openModal('signup')}><div className="nav-buttons">Sign up</div></div></div>
+      <div className="nav-contents-div"><div className="nav-contents" onClick={() => openModal('login')}><div className="nav-buttons">Log In</div></div></div>
     </nav >
   )
 
   const yesCurrentUser = () => (
-    <nav className="nav-left-contents" >
-      <div className="nav-contents">Trips</div>
-      <div className="nav-contents">Messages</div>
-      <button className="nav-contents" onClick={logout}>Log out</button>
+    <nav className="nav-right-contents" >
+      <div className="nav-contents-div"><div className="nav-contents"><div className="nav-buttons">Trips</div></div></div>
+      <div className="nav-contents-div"><div className="nav-contents"><div className="nav-buttons">Messages</div></div></div>
+      <div className="nav-contents-div"><div className="nav-contents" onClick={logout}><div className="nav-buttons">Log out</div></div></div >
     </nav >
   )
 
@@ -49,15 +49,29 @@ export default ({ currentUser, logout, openModal }) => {
       {/* <div className="main-page-image">
 
       </div> */}
-      <Link className="nav-right" to="/"><img className="logo" src={window.logoURL} /></Link>
-      <div className="nav-right">
-        <input type="text" value="Try Paris"/>
-      </div>
       <div className="nav-left">
-        {render}  
+        <Link to="/"><img className="logo" src={window.logo2URL} /></Link>
+        <div className="search">
+          <div className="search-bar-container"> 
+            {/* form */}
 
+            <div className="search-bar-container2">
+              <label className="search-contents">
+                <div className="search-icon-container">
+                  <img className="search-icon" src={window.search} height="20"/>
+                </div>
+                <div className="search-input-container">
+                  <input className="search-input" type="text" placeholder="Try 'paris'" />
+                </div>
+              </label>
+            </div>
+            
+          </div>
+        </div>
       </div>
-    
+      <div className="nav-right">
+        {render}  
+      </div>
     </div>
   )
 }

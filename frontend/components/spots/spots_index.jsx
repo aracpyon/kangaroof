@@ -14,17 +14,46 @@ class SpotsIndex extends React.Component {
     // debugger
     const { spots } = this.props;
     return(
-      <div>
-        <h1>Travel World with Kangaroof</h1>
-        <div>
-          {spots.map(spot => (
-            <SpotIndexItem
-              spot={spot}
-              key={spot.id}
-            />
-          ))}
+      <main className="site-content">
+        <div className="content-container">
+          <div className="content-index-container1">
+            <div className="content-index-container2">
+              
+              <div className="section1">
+                <div className="section1-background-setting">
+                  <div className="section1-margin">
+                    
+                    <div className="section1-title-container">
+                      <div className="section1-title-margin">
+                          <div className="section1-title-text-container">
+                              <h3 className="section1-title-text1">Travel World with Kangaroof</h3>
+                              <div className="section1-title-text2">Exlplore some of the best reviewed stays in the world</div>
+                          </div>
+                      </div>   
+                    </div>
+
+                    <div className="section1-index-container">
+                  
+                          
+                          {spots.map(spot => (
+                              <div className="section1-indexes">
+                                <SpotIndexItem
+                                  spot={spot}
+                                  key={spot.id} />
+                              </div>
+                           ))}
+                      
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              
+
+            </div>
+          </div>
         </div>
-      </div>
+        
+      </main>
     )
   }
 }

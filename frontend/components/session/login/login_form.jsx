@@ -8,10 +8,17 @@ class LoginForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   handleInput(type) {
     return (e) => {
+      // debugger
+      // if (e.target.value === "") {
+      //   this.nochange = "nochange-empty";
+      // } else {
+      //   this.nochange = "nochange"
+      // }
       this.setState({ [type]: e.target.value })
       //we need type to dynamically create keys 
       //right now we have 'username' and 'password' from forms
@@ -50,6 +57,14 @@ class LoginForm extends React.Component {
 
   }
 
+  handleDemo(){
+    const { demoUser } = this.props
+    this.setState(demoUser)
+    return () => this.handleSubmit(this.state);
+    // const demoUser = Object.assign({}, this.state)
+    // this.props.processForm(demoUser).then(this.props.closeModal);
+  }
+
   render() {
     let errors;
     if (this.renderErrors() === null) {
@@ -57,6 +72,8 @@ class LoginForm extends React.Component {
     } else {
       errors = "errors"
     }
+
+    
 
     return (
       <div className="session-container">
@@ -68,7 +85,7 @@ class LoginForm extends React.Component {
         
         </header>
         <div className="session-form">
-          <form onSubmit={this.handleSubmit} className="login-form">
+          <form onSubmit={this.handleSubmit} className="form-form">
              {this.renderErrors()}
             <div className={`input-border ${errors}`} >
               <input
@@ -76,8 +93,10 @@ class LoginForm extends React.Component {
                 type="text"
                 value={this.state.email}
                 onChange={this.handleInput('email')}
-                placeholder="email"
+                required
+                // placeholder="email"
                  />
+             <label id={this.nochange} className={`insession-label`} for="email">email</label>
             </div>
             <br />
             <div className={`input-border ${errors}`} >
@@ -86,15 +105,16 @@ class LoginForm extends React.Component {
                 type="password"
                 value={this.state.password}
                 onChange={this.handleInput('password')}
-                placeholder="password" />
+                required
+                // placeholder="password" 
+                />
+              <label className="insession-label" for="password">password</label>
             </div>
             <br />
 
             <button className="session-submit" type="submit" >Log in</button>
           <div className="session-bottom">
-            <div className="session-button">Forgot Password?</div>
-            <br/>
-            <div className="session-button">More login options</div>
+            <button className="session-submit" type="submit" onClick={() => this.handleDemo()} >Demo log</button>
             <br/>
             <div className="session-change">
               <div className="session-change-question">Don't have an account?</div>

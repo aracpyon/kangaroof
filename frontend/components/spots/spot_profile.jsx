@@ -1,4 +1,6 @@
 import React from 'react';
+import ProfileDetails from './spot_profile_details'
+import ProfilePhotos from './spot_profile-photos';
 
 class SpotProfile extends React.Component{
   constructor(props){
@@ -14,13 +16,30 @@ class SpotProfile extends React.Component{
   render(){
     if (this.props.spot){
       const { title, description, address, price, city } = this.props.spot;
+      const photos = this.props.spot.photoUrls;
+      
+      // debugger
       return (
-        <div>
-          <h1>{title}</h1>
-          <div>{address}</div>
-          <div>{price}</div>
-          <div>{city}</div>
-          <div>{description}</div>
+        <div className="profile-content-container">
+          <div className="profile-title-banner">
+            <span className="profile-title">
+              <h1>{title}</h1>
+            </span>
+            <br/>
+            <div className="profile-title-sub">
+              <span className="profile-rate">
+                <img className="star" src={window.star} />
+                5.00
+              </span>
+              <span className="divider">·</span>
+              <span className="profile-city">{city}</span>
+            </div>
+          </div>
+          
+          <ProfilePhotos photos={photos}/>
+          <ProfileDetails description={description} adddress={address} price={price} />
+          
+          
         </div>
       )
     } else {
