@@ -28,11 +28,9 @@ class MainPage extends React.Component {
             </Link>
           
           </div>
-          
-          
-          
 
         </div>
+          <SpotsIndexContainer />
       </div>
       )
 
