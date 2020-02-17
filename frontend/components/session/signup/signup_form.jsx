@@ -25,7 +25,7 @@ class SignupForm extends React.Component {
     // debugger
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal);
+    this.props.processForm(user).then(() => this.props.history.push('/'));
     // this.setState({
     //   email: "",
     //   name: "",
@@ -72,17 +72,19 @@ class SignupForm extends React.Component {
         <div className="close-x" onClick={this.props.closeModal} >X</div>
       </header>
         <div className="session-form" >
-          <form onSubmit={this.handleSubmit} className="signup-form">
+          <form onSubmit={this.handleSubmit} className="form-form">
             {this.renderErrors()}
-            <div className={`input-border ${errors}`}>
+            <div className={`input-border ${errors}`} >
               
               <input
                 className="session-input"
                 type="text"
                 value={this.state.email}
                 onChange={this.handleInput('email')}
-                placeholder="email" />
-          
+                required
+                // placeholder="email" 
+                />
+              <label className="insession-label" for="email" >email</label>
             </div>
           <br />
             <div className={`input-border ${errors}`} >
@@ -91,8 +93,10 @@ class SignupForm extends React.Component {
                 type="text"
                 value={this.state.name}
                 onChange={this.handleInput('name')}
-                placeholder="name"
+                // placeholder="name"
+                required
                 />
+              <label className="insession-label" for="name">name</label>
           </div>
           <br />
             <div className={`input-border ${errors}`}>
@@ -101,8 +105,10 @@ class SignupForm extends React.Component {
                 type="password"
                 value={this.state.password}
                 onChange={this.handleInput('password')}
-                placeholder="password" />
-          
+                // placeholder="password"
+                required 
+                />
+            <label className="insession-label" for="password">password</label>
           </div>
           <br />
           <button className="session-submit" type="submit" >Sign Up</button>

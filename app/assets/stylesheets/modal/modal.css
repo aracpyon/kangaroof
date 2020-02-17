@@ -7,6 +7,8 @@
   left: 0;
   background: rgba(0, 0, 0, 0.2);
   z-index: 10;
+  /* transition: all ease 1s; */
+  transition: top 0.4s;
 }
 
 .modal-child {
@@ -21,6 +23,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
+   /* transition: all 5s; */
   /* text-align: center; */
 }
+
+
 

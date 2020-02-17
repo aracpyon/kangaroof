@@ -1,0 +1,43 @@
+.profile-body{
+  padding: 50px 150px;
+  display: flex;
+  .profile-left{
+    width: 70%;
+    // margin-right: 50px;
+    .left-content{
+      margin-right: 70px;
+    }
+  }
+
+  .profile-right{
+    width: 30%;
+    // display: flex;
+    // flex-direction: column;
+
+    .price {
+      margin-bottom: 16px;
+      font-size: 16px;
+      span {
+        font-size: 22px;
+        font-weight: 900;
+        padding-right: 5px;
+      }
+    }
+    .check-button{
+      background-color: orange;
+      width: 100%;
+      height: 50px;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      border:none;
+      outline: none;
+      transition: all .4s ease;
+      &:hover {
+        background-color: darkorange;
+        cursor: pointer;
+      }
+
+    }
+  }
+}

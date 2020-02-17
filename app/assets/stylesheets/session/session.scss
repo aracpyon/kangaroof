@@ -1,0 +1,242 @@
+.session-head, .session-welcome, .session-container, .session-form, .session-form, .session-input, .session-submit, .session-button, .session-errors {
+  font-size: 16px;
+  /* font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Overpass', sans-serif; */
+  /* width: 100%; */
+  font-family: 'Sarabun', sans-serif;
+  /* width: 100%; */
+}
+
+
+.session-head {
+  padding: 24px 16px 16px;
+  border-bottom: 1px solid gray;
+}
+
+.session-welcome {
+  text-align: center;
+  color: black;
+  /* font-stretch: wider; */
+  font-weight: 800;
+}
+/* parent container */
+.session-container {
+  /* position: relative; */
+  /* display: inline-block; */
+  display: flex;
+  /* overflow: auto;
+  padding: 24px; */
+  flex-direction: column;
+  ;
+  /* text-align: center; */
+  /* width: 400px; */
+}
+
+
+.close-x {
+  margin-top: 20px;
+  margin-left: 20px;
+  position: absolute;
+  cursor:  pointer;
+  top: 0;
+  right: 535px;
+}
+
+
+// .insession-label {
+  //   // margin-bottom: 50px;
+  //   position: absolute;
+  // }
+  // .input-border {
+    //   position: relative;
+    //   // overflow:hidden;
+    // }
+    // .form > .input-border > .insession-label {
+      //   position: absolute;
+      //   margin-top: 100px;
+      // }
+      
+      // .input-border:focus + .insession-label {
+        
+        // }
+        // label {
+          //   margin-bottom: 50px;
+          // }
+.input-border{
+  position: relative;
+  margin: auto;
+}
+
+.session-input{
+  padding: 15px 10px 0px 10px;
+  border: none;
+  position: relative;
+  width: 95%;
+  height: 85%;
+  // height: 60px;
+  // margin-left: 10px;
+  // border: 1px solid grey;
+  color: lighten(black, 22%);
+  // border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+
+  
+  & + label{
+    
+    color: lighten(black, 60%);
+    position:absolute;
+    top: 19px;
+    left: 14px;
+    transition: all .2s ease-out;
+    z-index: 5000;
+  } 
+  
+  &:focus{
+    outline: none;
+    // border-width: 2px;
+    // border-color: black;
+    transition: all .2s ease-out;
+   
+  }
+
+  &:focus + label {
+    display: inline;
+    top: 9px;
+    color: gray;
+    font-size: 12px;
+    transition: top 0.2s;
+
+  }
+
+  
+  &:valid + label {
+    top: 9px;
+    // bottom: 10px;
+    font-size: 12px;
+    
+  }
+
+  
+  // &, 
+  // &:valid + label {
+  //   position: relative;
+  // }
+  // &.has-value:not(:focus) + label{
+  //   color:lighten(black, 60%);
+  //   transition: top 0.2s;
+
+  // }
+  
+}
+
+// #nochange {
+//   transition: none;
+//   position: absolute;
+//   top: 8px;
+//   color: gray;
+//   font-size: 12px;
+// }
+
+// #nochange-empty {
+//   transition: none;
+//   position: absolute;
+//   top: 8px;
+//   color: gray;
+//   font-size: 12px;
+// }
+
+// #nochange:focus {
+//   transition: none;
+// }
+
+// .session-input {
+//   &,
+//   & + .insession-label {
+//     position: relative;
+//   }
+// }
+
+// .form-form input:focus ~ label, 
+// .form-form input:valid ~ label {
+//   top: 15px;
+// }
+
+// .form-form input:valid ~ label {
+//   position: relative;
+//   top: 10px;
+//   font-size: 12px;
+
+// }
+
+//css transitions 
+
+.input-border {
+  height: 60px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.input-border:focus-within {
+  border: 2px solid black;
+}
+.session-submit {
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: orange;
+  border:none;
+  outline: none;
+  transition: all .4s ease;
+  &:hover {
+    background-color: darkorange;
+  }
+}
+
+.form-form {
+  padding: 24px;
+}
+
+.session-bottom {
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  /* margin-right: 20px; */
+}
+.session-change{
+  display: flex;
+}
+.session-change-question {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.session-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: underline;
+  padding: 0px;
+
+}
+
+.session-errors-content {
+  margin-top: 0;
+  margin-left: 2px;
+  color: red;
+  font-size: 12px;
+}
+.errors {
+  border: 2px solid red;
+  background: #fff0f5;
+}
+
+.errors:focus-within {
+  border: 2px solid red;
+  background: transparent 
+}

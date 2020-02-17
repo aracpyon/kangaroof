@@ -15,9 +15,9 @@ const App = () => (
     <Modal />
     <GreetingContainer />
     <Switch>
+      <Route exact path="/" component={MainPage} />
       <Route path={`/spots/:spotId`} component={SpotProfileContainer} />
       <Route exact path="/spots" component={SpotsIndexContainer}/>
-      <Route exact path="/" component={MainPage} />
     </Switch>
     {/* <MainPage /> */}
     

@@ -1,20 +1,121 @@
-.main-page-image {
-  background-image: image-url('paris.jpg');
+// .main-page-image {
+//   background-image: image-url('paris.jpg');
+//   width: 100%;
+//   height: 100vh; 
+//   background-size: 100% 100%;
+//   background-repeat: no-repeat;
+//   margin: auto;
+  
+  
+//   // object-fit: cover;
+// }
+
+.splash-photowall {
+  // height: 100vh !important;
+  // width: 100vw;
+  // background-size: 100% 100%;
+
+  
+  
   width: 100%;
-  height: 100vh; 
+  // height: 100vh; 
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: auto;
   
-  
+
+    // min-height: 650px !important;
+    // max-height: 1500px !important;
   // object-fit: cover;
+  // vertical-align: bottom;
+  // width: 100%;
+  // height: 100%;
+  // position: static;
+  // background-position: 50% 50%;
 }
-.main-page{
-  display: flex;
-  flex-direction: column;
+
+.main-page-content{
+  padding: 50px 80px;
+  .headlines {
+    width: 100%;
+    
+    .headline{
+      font-size: 22px;
+      font-weight: 900;
+    }
+    .subheadline {
+      // padding-bottom: 15px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    
+  }
+  .image-link{
+    position: relative;
+    .front-banner {
+      opacity: 0.8;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 5px;
+      position: relative;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   
-  margin: auto;
+      &:hover {
+        cursor: pointer;
+      }
+    } 
+    div{
+      position: absolute;
+      bottom: 16px;
+      // right: 550px;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      span{
+        width: fit-content;
+        margin-bottom: 20px;
+        font-size: 100px;
+        color: black;
+        font-weight: 500;
+        
+        font-family: 'Dancing Script', cursive;
+        // font-family: 'Pacifico', cursive;
+        // font-family: 'Great Vibes', cursive;
+        // font-family: 'Sacramento', cursive;
+
+          }
+          
+      button{
+      // position: absolute;
+      width: 150px;
+      height: 50px;
+      outline: none;
+      border: none;
+      background-color: white;
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 800;
+      color: rgb(72, 72, 72);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      letter-spacing: 0.1em;
+       &:hover {
+         cursor: pointer;
+       }
+
+          
+
+    }
+    }
+    
+
+    
+    
+  }
 }
-.headline {
-  font-size: 30px;
-}
+

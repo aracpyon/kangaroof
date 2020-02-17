@@ -19,19 +19,39 @@ class SpotIndexItem extends React.Component {
   render(){
     // debugger
     const { title, city, price, description } = this.props.spot;
+    const photos = this.props.spot.photoUrls;
+    const first = 1;
+
     return (
-      <div className="spotIndexItem" onClick={this.handleClick}>
-        
-        <div className="spot-index-info">
-          <div>{title}</div>
-        <div className="item-city-rate">
-          <span className="item-city">{city}</span>
-          <span className="item-rate">10</span>
-        </div>
-        <div>{price}</div>
-        <div>{description}</div>
-        </div>
-      </div>
+      // <div className="section1-index-padding">
+
+     
+        <div className="section1-index-item" onClick={this.handleClick}>
+          {/* {
+            photos.map(photo => {
+              return <img src={photo} height="50" alt="" />
+            })
+          } */}
+          <div className="section1-photo-container">
+              <img className="section1-photo" src={photos[first]} />
+          </div>
+            
+          <div className="spot-index-info">
+            <div className="item-city-rate">
+              <span className="item-city">{city}</span>
+              <span className="item-rate">
+                <img className="item-star" src={window.star} />
+                5.00</span>
+            </div>
+            <div className="item-title">{title}</div>
+            <div className="item-price">
+              <span>${price}</span>
+              /night
+            </div>
+            
+          </div>
+        </div>  
+      // </div>
     )
   }
 }
