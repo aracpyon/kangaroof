@@ -1,6 +1,10 @@
-import React from 'react'
 
-const ProfileDetails = ({description, address, price}) => {
+import React from 'react';
+import { Link } from 'react-dom';
+
+
+const ProfileDetails = ({ description, address, price, openModal }) => {
+
   return (
     <div className="profile-body">
       <div className="profile-left">
@@ -15,7 +19,7 @@ const ProfileDetails = ({description, address, price}) => {
           <span>${price}</span>
           /night
             </div>
-        <button className="check-button">Check availbility</button>
+        <button className="check-button" onClick={()=> openModal('createBooking')}>Check availbility</button>
       </div>
     </div>
   )

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import { signup, login, logout } from './util/session_api_util';
-import { fetchSpots, fetchSpot, createSpot, updateSpot } from "./actions/spot_actions";
+// import { fetchSpots, fetchSpot, createSpot, updateSpot } from "./actions/spot_actions";
+import { fetchBookings, fetchBooking, createBooking, updateBooking, destroyBooking } from './actions/booking_actions';
 import configureStore from './store/store';
 import Root from './components/root';
 
@@ -29,6 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.fetchSpot = fetchSpot;
   // window.createSpot = createSpot;
   // window.updateSpot = updateSpot;
+
+  window.fetchBookings = fetchBookings;
+  window.fetchBooking = fetchBooking;
+  window.createBooking = createBooking;
+  window.updateBooking = updateBooking;
+  window.destroyBooking = destroyBooking;
+  
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 

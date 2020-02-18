@@ -30,7 +30,7 @@ export default ({ currentUser, logout, openModal }) => {
 
   const yesCurrentUser = () => (
     <nav className="nav-right-contents" >
-      <div className="nav-contents-div"><div className="nav-contents"><div className="nav-buttons">Trips</div></div></div>
+      <div className="nav-contents-div"><div className="nav-contents"><div className="nav-buttons">My Trip</div></div></div>
       <div className="nav-contents-div"><div className="nav-contents"><div className="nav-buttons">Messages</div></div></div>
       <div className="nav-contents-div"><div className="nav-contents" onClick={logout}><div className="nav-buttons">Log out</div></div></div >
     </nav >

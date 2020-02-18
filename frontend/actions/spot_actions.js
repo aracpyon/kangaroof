@@ -29,6 +29,7 @@ export const fetchSpot = spotId => dispatch => {
 }
 
 export const createSpot = spot => dispatch => {
+  // debugger
   return APIUtil.createSpot(spot).then(spot => dispatch(receiveSpot(spot)))
 };
 

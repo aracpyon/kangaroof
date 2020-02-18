@@ -14,6 +14,7 @@ const ProfilePhotos = ({photos}) => {
         <div className="seg1">
           <img className="photo1" src={photos[0]} alt="" />
         </div>
+        
         <div className="seg2">
           <img className="photo2" src={photos[1]} alt="" />
           <img className="photo3" src={photos[2]} alt="" />

@@ -2,6 +2,7 @@ import React from 'react';
 import ProfileDetails from './spot_profile_details'
 import ProfilePhotos from './spot_profile-photos';
 import SpotMap from '../map/spot_map';
+import CreateBooking from '../booking/create_booking_container';
 
 class SpotProfile extends React.Component{
   constructor(props){
@@ -18,8 +19,9 @@ class SpotProfile extends React.Component{
     if (this.props.spot){
       const { title, description, address, price, city, lat, lng } = this.props.spot;
       const photos = this.props.spot.photoUrls;
+      const { openModal } = this.props;
       
-      debugger
+      // debugger
       return (
         <div className="profile-content-container">
           <div className="profile-title-banner">
@@ -38,7 +40,12 @@ class SpotProfile extends React.Component{
           </div>
           
           <ProfilePhotos photos={photos}/>
-          <ProfileDetails description={description} adddress={address} price={price} />
+          <ProfileDetails 
+            description={description} 
+            adddress={address} 
+            price={price} 
+            openModal={openModal}
+          />
           <SpotMap lat={lat} lng={lng} address={address} />
           
         </div>

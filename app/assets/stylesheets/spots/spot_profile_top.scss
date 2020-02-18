@@ -45,39 +45,42 @@
     .profile-photo-sub-container {
       max-height: calc(66vh - 64px) !important;
       overflow-y: hidden !important;
+      width: 100%;
       position: relative; 
-      min-height: 300px !important;
+      min-height: 300px;
       // display: flex;
 
       .seg1 {
         display: inline-block;
         vertical-align: bottom;
-        height: 100% !important;
-        width: 50% !important;
-        left: 0px !important;
-        top: 0px !important;
-        position: absolute !important;
+        height: 100% ;
+        width: 50%;
+        // left: 0px;
+        // top: 0px;
+        // position: absolute;
 
         img {
           height: 100%;
+          width: 100%;
           overflow: hidden;
           object-fit: cover;
           vertical-align: bottom;
         }
       }
 
-      .sesg2 {
+      .seg2 {
         display: flex;
-        flex-direction: column !important;
-        height: 100% !important;
-        width: 25% !important;
-        padding-left: 8px !important;
-        right: 0px !important;
-        top: 0px !important;
-        position: absolute !important;
+        flex-direction: column;
+        height: 100%;
+        width: 25%;
+        // padding-left: 8px;
+        right: 0px;
+        top: 0px;
+        position: absolute;
           
         img {
           height: 50%;
+          width: 100%;
           object-fit: cover;
           vertical-align: bottom;
         }
@@ -85,13 +88,13 @@
 
       .seg3 {
         display: flex;
-        flex-direction: column !important;
-        height: 100% !important;
-        width: 25% !important;
-        padding-left: 8px !important;
-        right: 0px !important;
-        top: 0px !important;
-        position: absolute !important;
+        flex-direction: column;
+        height: 100%;
+        width: 25%;
+        // padding-left: 8px;
+        right: 0px;
+        top: 0px;
+        position: absolute;
           img {
           height: 50%;
           object-fit: cover;

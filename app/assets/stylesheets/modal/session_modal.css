@@ -1,0 +1,32 @@
+
+.session-modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  /* transition: all ease 1s; */
+  transition: top 0.4s;
+}
+
+.session-modal-child {
+  
+  position: absolute;
+  /* width: 568px;
+  height: 460px; */
+  /* width: 568px; */
+  width: fit-content;
+  height: fit-content;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+   /* transition: all 5s; */
+  /* text-align: center; */
+}
+
+
+

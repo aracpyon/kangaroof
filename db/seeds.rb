@@ -10,6 +10,8 @@ require 'open-uri'
 ActiveRecord::Base.transaction do 
   User.destroy_all
   Spot.destroy_all
+  Booking.destroy_all
+  
 
 
   ara = User.create(email: "aracpyon@gmail.com", name: "Ara C Pyon", password: "ilovedogscats")
@@ -39,7 +41,7 @@ ActiveRecord::Base.transaction do
                     address: "1000 5th Ave, New York, NY 10028", 
                     city: "New York",
                     lat: 40.7794, 
-                    lng: 73.9632, 
+                    lng: -73.9632, 
                     price: 200,
                     description: "The Metropolitan Museum of Art of New York City, colloquially 'the Met', is the largest art museum in the United States. With 6,953,927 visitors to its three locations in 2018, it was the third most visited art museum in the world. Its permanent collection contains over two million works, divided among 17 curatorial departments. The main building at 1000 Fifth Avenue, along the Museum Mile on the eastern edge of Central Park in Manhattan's Upper East Side, is by area one of the world's largest art galleries. A much smaller second location, The Cloisters at Fort Tryon Park in Upper Manhattan, contains an extensive collection of art, architecture, and artifacts from medieval Europe. On March 18, 2016, the museum opened the Met Breuer museum along Madison Avenue on the Upper East Side; it extends the museum's modern and contemporary art program.")
 
@@ -48,7 +50,7 @@ ActiveRecord::Base.transaction do
                       address: "429 11th Ave, New York, NY 10001",
                       city: "New York", 
                       lat: 40.7578,
-                      lng: 74.0023,
+                      lng: -74.0023,
                       price: 300,
                       description: "Anime NYC is an annual three-day anime convention held during November at the Jacob K. Javits Convention Center in New York City. The convention typically offers arcade games, an artist alley, concerts, manga library (Carolina Manga Library), masquerade, panels, screenings, vendors, and video and card games. Anime NYC offered 100 hours of programming in 2017. Anime NYC's organizer LeftField Media created the New York Comic Con and also runs Washington DC’s Awesome Con.")
   
@@ -67,7 +69,7 @@ ActiveRecord::Base.transaction do
                           address: "111 8th Ave, New York, NY 10011", 
                           city: "New York",
                           lat: 40.7128,
-                          lng: 74.0060,
+                          lng: -74.0060,
                           price: 400,
                           description: "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. It is considered one of the Big Four technology companies, alongside Amazon, Apple, and Facebook. In 2010, Google, which had previously leased space in the building contracted to purchase the entire 2,900,000-square-foot (270,000 m2) building, in a deal reported to be worth around $1.9 billion.")
   eiffel = Spot.create(title: "Eiffel Tower: Midnight in Paris",
@@ -83,7 +85,7 @@ ActiveRecord::Base.transaction do
                             address: "Broadway, 7th Avenue, 42nd and 47th Streets",
                             city: "New York",
                             lat: 40.7580,
-                            lng: 73.9855,
+                            lng: -73.9855,
                             price: 200,
                             description: "Times Square is a major commercial intersection, tourist destination, entertainment center, and neighborhood in the Midtown Manhattan section of New York City, at the junction of Broadway and Seventh Avenue. Brightly lit by numerous billboards and advertisements, it stretches from West 42nd to West 47th Streets, and is sometimes referred to as 'the Crossroads of the World', 'the Center of the Universe', 'the heart of the Great White Way', and 'the heart of the world'. One of the world's busiest pedestrian areas, it is also the hub of the Broadway Theater District and a major center of the world's entertainment industry. Times Square is one of the world's most visited tourist attractions, drawing an estimated 50 million visitors annually."
                             )

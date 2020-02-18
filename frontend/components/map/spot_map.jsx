@@ -4,7 +4,7 @@ import MarkerManager from '../../util/marker_manager';
 class SpotMap extends React.Component{
   constructor(props){
     super(props);
-    debugger;
+    // debugger;
   }
 
   componentDidMount(){
