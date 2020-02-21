@@ -18,10 +18,12 @@ const mDTP = dispatch => {
 }
 
 function BookingModal(props) {
+  // debugger
   const { modal, closeModal } = props;
   const pathname = props.location.pathname;
   const strInt = pathname.split('')[pathname.length - 1];
   const spotId = parseInt(strInt);
+  console.log(spotId);
 
   // debugger
   if (!modal) {
