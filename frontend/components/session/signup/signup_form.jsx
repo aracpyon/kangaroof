@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class SignupForm extends React.Component {
     // debugger
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(() => this.props.history.push('/'));
+    this.props.processForm(user).then(this.props.closeModal, this.props.history.push('/'));
     // this.setState({
     //   email: "",
     //   name: "",
@@ -126,4 +127,4 @@ class SignupForm extends React.Component {
   }
 }
 
-export default SignupForm;
+export default withRouter(SignupForm);

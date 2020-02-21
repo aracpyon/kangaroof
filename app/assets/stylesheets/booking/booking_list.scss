@@ -1,0 +1,55 @@
+.booking-list{
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  // padding: 100px;
+  .booking-list-container{
+    padding: 80px;
+    padding-top: 30px;
+
+    .booking-list-head {
+      width: 100%;
+      .line1 {
+        font-size: 32px;
+      }
+      .line2 {
+        font-size: 22px;
+      }
+    }
+
+    .booking-items-container{
+      
+      .booking-item-content{
+        margin: 50px 0;
+        border-top: 1px solid dimgray;
+        .booking-date-title{
+          .booking-date{
+            .from{
+            font-weight: 0;
+            margin-right: 10px;
+            }
+            .to{
+              margin: 0 10px;
+              font-weight: 0;
+            }
+            
+            // color: black;
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+          }
+        }
+        .booking-item-photo{
+          .booking-image{
+            width: 100%;
+            border-radius: 10px;
+            &:hover{
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

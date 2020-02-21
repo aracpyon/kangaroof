@@ -1,7 +1,8 @@
 import React from 'react';
 import ProfileDetails from './spot_profile_details'
 import ProfilePhotos from './spot_profile-photos';
-import SpotMap from '../map/spot_map';
+import SpotProfileMap from '../map/spot_profile_map';
+import SpotReviewItem from './spot_review_item';
 import CreateBooking from '../booking/create_booking_container';
 
 class SpotProfile extends React.Component{
@@ -14,13 +15,18 @@ class SpotProfile extends React.Component{
     // debugger
     this.props.fetchSpot(this.props.match.params.spotId);
   }
-
+  
   render(){
     if (this.props.spot){
       const { title, description, address, price, city, lat, lng } = this.props.spot;
       const photos = this.props.spot.photoUrls;
-      const { openModal } = this.props;
-      
+      const { reviews, authors, openModal } = this.props;
+      let total_rating = 0;
+      reviews.forEach(review => {
+        total_rating += review.rating
+      })
+      const average = Number.parseFloat(total_rating / reviews.length).toFixed(2);
+
       // debugger
       return (
         <div className="profile-content-container">
@@ -32,7 +38,7 @@ class SpotProfile extends React.Component{
             <div className="profile-title-sub">
               <span className="profile-rate">
                 <img className="star" src={window.star} />
-                5.00
+                {average}
               </span>
               <span className="divider">·</span>
               <span className="profile-city">{city}</span>
@@ -46,7 +52,28 @@ class SpotProfile extends React.Component{
             price={price} 
             openModal={openModal}
           />
-          <SpotMap lat={lat} lng={lng} address={address} />
+          <SpotProfileMap lat={lat} lng={lng} address={address} />
+          <div className="reviews-container">
+            <h2 className="reviews">Reviews</h2>
+            <div className="review-total">
+              <div className="review-score">
+                <img className="review-star" src={window.star} width="16" height="16" />
+                <div>{average}</div>
+              </div>
+              
+              <div className="num-reviews">
+                <div className="num">{reviews.length}</div>
+                <div>reviews</div>
+              </div>
+            </div>
+            
+            {
+              reviews.map(review => {
+                return <SpotReviewItem key={review.id} authors={authors} review={review} />
+              })
+            }
+
+          </div>
           
         </div>
       )

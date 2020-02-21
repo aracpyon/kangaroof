@@ -4,3 +4,5 @@
     json.photoUrls spot.photos.map { |file| url_for(file)}
   end
 end
+
+

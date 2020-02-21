@@ -1,9 +1,12 @@
 class Api::BookingsController < ApplicationController
   def index
+    # debugger
     @bookings = if params[:user_id]
-                Booking.where(guest_id: params[:user_id])
+      # debugger
+                Booking.includes(:spot).where(guest_id: params[:user_id])
               else
-               Booking.all
+                # debugger
+               Booking.includes(:spot).all
               end
     render :index
   end

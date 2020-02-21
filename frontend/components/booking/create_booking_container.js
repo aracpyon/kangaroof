@@ -18,7 +18,10 @@ const mSTP = (state, ownProps) => {
       infants: 0,
       guest_id: state.session.id,
       spot_id: ownProps.spotId,
-      focusedInput: START_DATE
+      focusedInput: START_DATE,
+      open: false,
+      error: ""
+      // showClearDates: false
     },
     formType: 'createBooking'
   }

@@ -1,5 +1,6 @@
 .profile-content-container {
   // padding: 0px 100px;
+  margin-top: 100px;
 
   .profile-title-banner{
     padding: 24px 150px;
@@ -10,11 +11,12 @@
     .profile-title-sub{
       // display: flex;
       // flex-wrap: wrap; 
+      font-size: 16px;
       .profile-rate {
         // margin-top: 4px;
         .star{
-          width: 12px;
-          height: 12px;
+          width: 16px;
+          height: 16px;
           fill: currentColor;
           padding-right: 4px;
         }
@@ -47,6 +49,7 @@
       overflow-y: hidden !important;
       width: 100%;
       position: relative; 
+      display:flex;
       min-height: 300px;
       // display: flex;
 
@@ -58,6 +61,7 @@
         // left: 0px;
         // top: 0px;
         // position: absolute;
+        overflow: hidden;
 
         img {
           height: 100%;
@@ -65,6 +69,14 @@
           overflow: hidden;
           object-fit: cover;
           vertical-align: bottom;
+          transition: all .5s;
+          // overflow: hidden;
+
+          &:hover{
+            transform: scale(1.05);
+            // overflow: hidden;
+            
+          }
         }
       }
 
@@ -76,13 +88,21 @@
         // padding-left: 8px;
         right: 0px;
         top: 0px;
-        position: absolute;
+        overflow: hidden;
+        // position: absolute;
           
         img {
           height: 50%;
           width: 100%;
           object-fit: cover;
           vertical-align: bottom;
+          transition: all .5s;
+          overflow: hidden;
+          &:hover{
+            transform: scale(1.05);
+            overflow: hidden;
+            
+          }
         }
       }
 
@@ -94,11 +114,20 @@
         // padding-left: 8px;
         right: 0px;
         top: 0px;
-        position: absolute;
+        overflow: hidden;
+        // position: absolute;
           img {
           height: 50%;
           object-fit: cover;
           vertical-align: bottom;
+          transition: all .5s;
+          overflow: hidden;
+
+          &:hover{
+            transform: scale(1.05);
+          
+            
+          }
         }
 
       }

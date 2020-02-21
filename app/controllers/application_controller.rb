@@ -18,6 +18,11 @@ class ApplicationController < ActionController::Base
   #     redirect_to new_session_url
   #   end
   # end
+  def require_logged_in
+    unless current_user
+      render json: { base: ['invalid credentials'] }, status: 401
+    end
+  end
 
   def login!(user)
     @current_user = user

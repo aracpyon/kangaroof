@@ -7,6 +7,21 @@ class Api::SpotsController < ApplicationController
   def show
     @spot = Spot.find(params[:id])
     # render :show
+
+    
+  end
+
+  def search
+    # debugger
+    result = Spot.search_by_keyword(params[:keyword])
+    if result
+      # debugger
+      @spots = result
+      render :index
+    else 
+      # debugger
+      render json: ["No result"], status: 404
+    end
   end
 
   def create
@@ -38,4 +53,9 @@ class Api::SpotsController < ApplicationController
     # debugger
     params.require(:spot).permit(:title, :address, :city, :lat, :lng, :description, :price, :host_id)
   end
+
+  def bounds
+    params[:bounds]
+  end
+
 end

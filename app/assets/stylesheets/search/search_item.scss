@@ -1,0 +1,99 @@
+.search-result-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .search-items-container {
+    width: 45%;
+    padding: 24px;
+    margin-top: 77px;
+    .search-items-num{
+      width: 100%;
+      font-size: 30px;
+      margin: 20px 0;
+    }
+    .search-index-items{
+      &:hover{
+        cursor: pointer;
+      }
+      width: 100%;
+      // width: 45%;
+      display: flex;
+      padding: 26px 0;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      .search-photo-container{
+        width: 45%;
+        .search-photo{
+          width: 100%;
+          border-radius: 10px;
+          
+        }
+      }
+      .search-index-info{
+        width: 65%;
+        margin-left: 18px;
+        .search-item-city-rate{
+          text-align: right;
+          .search-item-rate{
+            font-size: 16px;
+            .item-star{
+              width: 14px;
+              height: 14px;
+              fill: currentColor;
+              padding-right: 4px;
+            }
+          }
+        }
+        .search-item-title{
+          max-height: 24px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 20px;
+          font-weight: 900;
+           
+          padding-right: 5px;
+          color: black;
+          font-family: 'Lato', sans-serif;
+
+        }
+        .search-item-description{
+          overflow: hidden;
+          max-height: 93px;
+          margin: 28px 0;
+        }
+        .search-item-price{
+          // display: flex;
+          // justify-content: space-between;
+          // align-items: flex-end;
+          // flex-grow: 1;
+          .bottom{
+            text-align: right;
+            font-size: 20px;
+            span{
+             font-weight: 900;
+              padding-right: 5px;
+              color: black;
+              font-family: 'Lato', sans-serif;
+            }
+          }
+          
+        }
+
+      }
+
+    }
+  }
+  
+  .search-map-container{
+    position: fixed;
+    top: 78px;
+    right: 0;
+    width:50%;
+    height: 100%;
+    .search-map {
+      display: absolute;
+      
+      width: 100%;
+      height: 90%;
+    }
+  }
+}

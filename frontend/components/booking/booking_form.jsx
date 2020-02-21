@@ -1,7 +1,3 @@
-// import 'react-dates/initialize';
-// import 'react-dates/lib/css/_datepicker.css';
-// const reactDates = require('react-dates/initialize');
-// import 'react-dates/lib/css/_datepicker.css';
 import React from 'react';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 // import { START_DATE, END_DATE } from 'react-dates/src/constants';
@@ -17,7 +13,16 @@ class BookingForm extends React.Component{
     this.state = this.props.booking;
     // debugger
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
+    this.increment = this.increment.bind(this);
+    // this.decrement = this.decrement.bind(this);
+
+    this.innerRef = React.createRef();
+    this.outerRef = React.createRef();
   }
+
+
   handleDate(date){
     if (date) {
       const dateStr = date.toISOString().slice(0, 10);
@@ -38,30 +43,21 @@ class BookingForm extends React.Component{
     splited.unshift(splited.pop());
     return splited.join("");
   }
-  handleInput(type){
-    // type = {startDate: "02/10/2020",
-    //         endDate: "02/20/2020",
-  //           num_guests: 3 }
-    // if (this.state[type] === null){
-    //   return e => this.setState({[type]: this.dateTransform(e.target.value)})
-    // }else{
-    //   return this.state;
-    // }
-    debugger
-    return e => {
-      if (this.state[type] === null) {
-        debugger
-      return this.setState({[type]: this.dateTransform(e.target.value)})
-    }else{
-      debugger
-      return this.state;
-      }
-    }
-  }
+  // handleInput(type){
+  //   return e => {
+  //     if (this.state[type] === null) {
+  //       // debugger
+  //     return this.setState({[type]: this.dateTransform(e.target.value)})
+  //   }else{
+  //     // debugger
+  //     return this.state;
+  //     }
+  //   }
+  // }
 
   
   handleSubmit(e){
-    debugger
+    // debugger
     e.preventDefault();
     const { startDate, endDate, num_guests, guest_id, spot_id } = this.state;
     const newBooking = Object.assign(
@@ -73,13 +69,122 @@ class BookingForm extends React.Component{
                           guest_id: guest_id
                         }
                         );
-    debugger
+    // debugger
     this.props.action(newBooking);
-  }                    
+  }
+  
+  handleFocus(e){
+    // debugger
+    if (this.innerRef.current !== e.target && !this.innerRef.current.contains(e.target)){
+      if (this.state.open){ 
+      // debugger
+      return this.setState({open: false})
+      
+    }else{
+      // debugger
+      return this.setState({open: true })
+      }
+    }
+    
+    // document.addEventListener("click", function (e) {
+    //   var element = document.getElementById('parent');
+
+    //   if (e.target !== element && !element.contains(e.target)) {
+    //     this.setState({ open: false });
+    //   }
+    // });
+    // this.setState({ open: true });
+
+  }
+
+  // handleBlur(){
+  //   // debugger;
+    
+  //   // return e => {
+  //   //   debugger
+  //   //   const element = document.getElementById('parent');
+
+  //   // if (!element.contains(e.target)) {
+  //   //   return this.setState({ open: false })
+  //   // }
+  //   // // this.setState({ open: false });
+  //   // }
+    
+  // }
+
+  handleBlur(ref, callback){
+    // debugger 
+    return event => {
+      // debugger
+      const { relatedTarget } = event;
+      const node = ref.current;
+
+      if (node){
+        // debugger
+        if (node !== relatedTarget && !node.contains(relatedTarget)){
+        // debugger
+        callback();
+        }
+      }else{
+        console.log("node is null");
+      }
+        
+      
+    }
+  }
+
+  increment(type){
+    // debugger
+    const val1 = this.state[type]
+    if ( this.state[type] < 10 ){
+      return this.setState({
+      error: "",
+      num_guests: this.state.num_guests + 1,
+      [type]: val1 + 1
+      })
+    } else {
+      return this.setState({ error: "maximum guests are 10 people"});
+    }
+    
+  }
+
+  decrement(type){
+    const val2 = this.state[type]
+    if (this.state.num_guests > 1 ){
+      return this.setState({
+      error: "",
+      num_guests: this.state.num_guests -1,
+      [type]: val2 - 1
+      })
+    } else {
+      return this.setState({ error: "we need at least one guest"});
+    }
+    
+  }
+
+  renderError() {
+    if (this.state.error.length > 0) {
+      //empty [] or undefined does not work 
+      return (
+        <div className="guest-error">
+            <p className="guest-error-message" key="guest-error">
+              {this.state.error}
+            </p>
+        </div>
+      )
+    } else {
+      return null;
+    }
+
+  }
   
   render(){
     const { photoUrls, title, price } = this.props.spot;
-    const { num_guests, adults, children, infants } = this.state;
+    const { num_guests, adults, children, infants, open } = this.state;
+
+    let dropdownFlag = open ? dropdownFlag = 'OPEN' : dropdownFlag = ''
+
+    
 
     return (
       <div className="booking-container">
@@ -95,15 +200,15 @@ class BookingForm extends React.Component{
                   startDate={this.state.startDate}
                   endDate={this.state.endDate}
                   onDatesChange={({startDate, endDate}) => {
-                    debugger
+                    // debugger
                     return this.setState({startDate, endDate})}}
                   focusedInput={this.state.focusedInput}
                   onFocusChange={focusedInput => {
-                    debugger
+                    // debugger
                     return this.setState({ focusedInput })}}
                   numberOfMonths={2}
                   hideKeyboardShortcutsPanel={true}
-                  showClearDates={true}
+                  // showClearDates={true}
                   // isOutsideRange={day => !isInclusivelyAfterDay(day, moment())}
                   // isDayBlocked={day => this.dayBlocked(day)}
                 
@@ -149,38 +254,67 @@ class BookingForm extends React.Component{
                 </div>
               </div>
 
-              <div className="num-guests-border">
+              <div 
+                tabIndex="1" 
+                id="parent"
+                ref={this.outerRef} 
+                className="num-guests-border" 
+                onClick={this.handleFocus} 
+                onBlur={this.handleBlur(this.outerRef, e => 
+                  this.setState({ open: false }))}
+                >
                 <label className="guest-label">Guests</label>
                 <div>
-                  <input className="num-guests" placeholder={`${num_guests} guests`} readonly/>
-                  <button className="down-button">
-                    <img className="down" src={window.down} alt="" width="16" height="16"/>
-                  </button>
+                  <input className="num-guests" placeholder={`${num_guests} guests`} />
+                  
+                  <img className="down" src={window.down} alt="" width="16" height="16"/>
+                  
                 </div>
-                <div className="dropdown">
-                  <div className="people1">
-                    <span className="person">Adults</span>
-                    <div>
-                      <img className="minus" src={window.minus} width="22" height="22"/>
-                      <div>{adults}</div>
-                      <img className="plus" src={window.plus} width="22" height="22"/>
+                <div 
+                  ref={this.innerRef}
+                  className={`dropdown ${dropdownFlag}`} 
+                  tabIndex="1"
+                  onBlur={this.handleBlur(this.innerRef, e => 
+                    this.setState({ open: false })
+                    )}
+                  >
+                  <div className="dropdown-contents">
+                    <div className="people">
+                      <span className="person">Adults</span>
+                      <div className="count">
+                        <img className="minus" src={window.minus} width="32" height="32" 
+                        onClick={() => this.decrement('adults')}
+                        />
+                        <div className="num">{adults}</div>
+                        <img className="plus" src={window.plus} width="32" height="32" 
+                        onClick={() => this.increment('adults')}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="people2">
-                    <span className="person">Children</span>
-                    <div>
-                      <img className="minus" src={window.minus} width="22" height="22"/>
-                      <div>{children}</div>
-                      <img className="plus" src={window.plus} width="22" height="22"/>
+                    <div className="people">
+                      <span className="person">Children</span>
+                      <div className="count">
+                        <img className="minus" src={window.minus} width="32" height="32" 
+                        onClick={() => this.decrement('children')}
+                        />
+                        <div className="num">{children}</div>
+                        <img className="plus" src={window.plus} width="32" height="32" 
+                        onClick={() => this.increment('children')}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="people3">
-                    <span className="person">Infants</span>
-                    <div>
-                      <img className="minus" src={window.minus} width="22" height="22"/>
-                      <div>{infants}</div>
-                      <img className="plus" src={window.plus} width="22" height="22"/>
+                    <div className="people">
+                      <span className="person">Infants</span>
+                      <div className="count">
+                        <img className="minus" src={window.minus} width="32" height="32" 
+                        onClick={() => this.decrement('infants')}
+                        />
+                        <div className="num">{infants}</div>
+                        <img className="plus" src={window.plus} width="32" height="32" 
+                        onClick={() => this.increment('infants')}/>
+                      </div>
                     </div>
+                    {this.renderError()}
                   </div>
                 </div>
               </div>

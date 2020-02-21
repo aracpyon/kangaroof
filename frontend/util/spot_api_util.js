@@ -29,10 +29,20 @@ export const updateSpot = spot => {
   })
 }
 
-// export const createReview = review => {
-//   return $.ajax({
-//     method: "POST",
-//     url: 'api/reviews',
-//     data: { review }
-//   })
-// };
+export const createReview = review => {
+  debugger
+  return $.ajax({
+    method: "POST",
+    url: 'api/reviews',
+    data: { review }
+  })
+};
+
+export const fetchSearchResult = (keyword) => {
+  // debugger
+  return $.ajax({
+    method: "GET",
+    url: "api/search",
+    data: { keyword }
+  })
+}

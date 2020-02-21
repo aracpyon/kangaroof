@@ -122,6 +122,7 @@
             border-radius: 10px;
             }
             input {
+              cursor: pointer;
               caret-color: transparent;
               font-size: 16px;
               width: 90%;
@@ -131,9 +132,7 @@
               margin: 26px 12px 10px;
               border: none;
               outline: none;
-              &:hover {
-                cursor: default;
-              }
+              
               &::placeholder {
                 color:transparent;
               }
@@ -188,6 +187,7 @@
             }
 
             input {
+              cursor: pointer;
               caret-color: transparent;
               font-size: 16px;
               font-family: 'Sarabun', sans-serif;
@@ -241,16 +241,15 @@
         }
 
         .num-guests-border{
+          // cursor: pointer;
           position: relative;
-          height: 57px;
+          height: 59px;
           width: 100%;
+          
           border: 0.5px solid gray;
           border-radius: 10px;
           &:focus-within{
             border: 2px solid black;
-          }
-          &:hover {
-            cursor: pointer;
           }
           &:focus{
             border: 2px solid black;
@@ -268,29 +267,32 @@
           div {
             // display: flex;
             .num-guests{
+              cursor: pointer;
               position: relative;
               caret-color: transparent;
               background-color: transparent;
               border:none;
               outline: none;
-              width: 100%;
+              width: 90%;
               padding: 26px 36px 10px 15px;
               font-size: 17px;
-            }
-            .down-button{
-              margin: 20px 20px;
-              padding: 0px;
-              width: 16px;
-              height: 16px;
-              background-color: transparent;
-              border: none;
-              outline:none;
-              
-              .down{
-                // padding: 20px 20px;
 
+              &:focus{
+                outline: none;
+              }
+              &:focus-within{
+                outline: none;
               }
             }
+            
+              
+            .down{
+              position: absolute;
+              top: 22px;
+              right: 24px;
+
+            }
+            
           }
           
         }
@@ -353,6 +355,65 @@
   
 }
 
+.OPEN{
+  display: block;
+  top: 58px;
+  cursor: default;
+  background-color: white;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px, rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
+  border-radius: 4px;
+  // padding: 16px;
+  &:focus, &:focus-within {
+    outline: none;
+  }
+
+  
+}
+
+.dropdown-contents {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.people{
+  display: flex;
+  margin-bottom: 24px;
+  margin-top: 8px;
+  .person{
+    width: 100%;
+    font-size: 16px;
+    padding: 6px 0;
+  }
+  .count {
+    width: 105px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+      .num {
+        padding: 6px 0;
+        width: 50px;
+        text-align: center;
+        color: black;
+      }
+      .plus, .minus {
+        cursor: pointer;
+      }
+
+  
+  }
+}
+// .CLOSE{
+//   display: none;
+// }
+.guest-error-message {
+  color: red;
+  font-weight: 900;
+}
+div:focus {
+  outline: none;
+}
 
 
 

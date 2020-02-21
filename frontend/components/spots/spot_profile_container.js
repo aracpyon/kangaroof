@@ -8,7 +8,9 @@ const mSTP = (state, ownProps) => {
   const spot = state.entities.spots[ownProps.match.params.spotId]
   // debugger
   return {
-    spot: spot
+    spot: spot,
+    reviews: Object.values(state.entities.reviews),
+    authors: state.entities.users
     // host: state.entities.users[spot.host_id]
   }
 }

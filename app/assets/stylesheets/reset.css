@@ -1,4 +1,12 @@
-
+body{
+  height: 100%;
+    width: 100%;
+    background: white;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: -1;
+}
 body, button {
   color: #484848;
   /* font-family: 'Sarabun', sans-serif; */
@@ -11,7 +19,6 @@ body, button {
   /* font-family: 'Overpass', sans-serif; */
   font-size: 14px;
 }
-
-main, article, header, nav, aside, details, figcaption, figure, footer, section, div {
-    display: block;
+div:hover {
+  outline: none;
 }

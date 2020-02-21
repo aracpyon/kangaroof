@@ -1,3 +1,8 @@
+.CalendarDay__default:hover {
+  background: orange;
+  border: 1px solid #e4e7e7;
+  color: inherit
+}
 .CalendarDay__selected_span {
   background: #82e0aa; 
   color: white; 
@@ -16,5 +21,5 @@
 
 .CalendarDay__hovered_span:hover,
 .CalendarDay__hovered_span {
-  background: brown;
+  background: #82e0aa;
 }

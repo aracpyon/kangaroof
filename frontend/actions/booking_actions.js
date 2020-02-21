@@ -7,15 +7,23 @@ export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 export const REMOVE_BOOKING = 'REMOVE_BOOKING';
 export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS';
 
-const receiveAllBookings = bookings => ({
-  type: RECEIVE_ALL_BOOKINGS,
-  bookings
-});
+const receiveAllBookings = bookings => {
+  // debugger
+  return {
+    type: RECEIVE_ALL_BOOKINGS,
+    bookings: bookings.bookings,
+    spots: bookings.spots
+  }
+};
 
-const receiveBooking = booking => ({
-  type: RECEIVE_BOOKING,
-  booking
-});
+const receiveBooking = booking => {
+  // debugger
+  return {
+    type: RECEIVE_BOOKING,
+    booking
+
+  }
+};
 
 const removeBooking = bookingId => ({
   type: REMOVE_BOOKING,

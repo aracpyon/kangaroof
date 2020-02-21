@@ -30,7 +30,10 @@ class MainPage extends React.Component {
           </div>
 
         </div>
+        <div id="main-bottom">
           <SpotsIndexContainer />
+        </div>
+          
       </div>
       )
 

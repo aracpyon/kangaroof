@@ -1,0 +1,54 @@
+.reviews-container{
+  padding: 0 150px;
+  .reviews{
+    font-size: 25px;
+    font-family: 'Quicksand', sans-serif;
+    margin: 17px 0 30px;
+  }
+  .review-total{
+     width: 50%;
+    display: flex;
+    font-size: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    .review-score{
+      display: flex;
+      margin-right: 40px;
+      .review-star{
+        padding-right: 10px;
+        padding-top: 5px;
+      }
+    }
+    .num-reviews{
+      display: flex;
+      .num {
+        font-weight: 900;
+        padding-right: 10px;
+      }
+    }
+  }
+  .review-item-container{
+    font-size: 20px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+
+    .reviewer-rating{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .reviewer {
+      font-size: 20px;
+      font-weight: 900;
+
+    } 
+    .rating{
+      display: flex;
+      justify-content: right;
+    }
+    }
+    
+  }
+}
