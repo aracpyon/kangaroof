@@ -27,11 +27,6 @@ class SpotIndexItem extends React.Component {
 
      
         <div className="section1-index-item" onClick={this.handleClick}>
-          {/* {
-            photos.map(photo => {
-              return <img src={photo} height="50" alt="" />
-            })
-          } */}
           <div className="section1-photo-container">
               <img className="section1-photo" src={photos[first]} />
           </div>

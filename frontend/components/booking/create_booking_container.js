@@ -1,5 +1,6 @@
 import { fetchBookings, fetchBooking, createBooking } from '../../actions/booking_actions';
 import { openModal, closeModal } from "../../actions/modal_actions";
+import { fetchSpot } from '../../actions/spot_actions';
 import BookingForm from './booking_form';
 import { connect } from 'react-redux';
 import { START_DATE, END_DATE } from 'react-dates/src/constants';
@@ -30,6 +31,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => ({
   action: (booking) => dispatch(createBooking(booking)),
+  fetchSpot: spotId => dispatch(fetchSpot(spotId)),
   closeModal: () => dispatch(closeModal())
 
 })

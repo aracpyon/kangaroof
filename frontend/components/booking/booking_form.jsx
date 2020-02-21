@@ -21,7 +21,9 @@ class BookingForm extends React.Component{
     this.innerRef = React.createRef();
     this.outerRef = React.createRef();
   }
-
+  // componentDidMount(){
+  //   this.props.fetchSpot(this.props.spot.id);
+  // }
 
   handleDate(date){
     if (date) {
@@ -180,6 +182,8 @@ class BookingForm extends React.Component{
   }
   
   render(){
+
+    if (this.props.spot){
     const { photoUrls, title, price } = this.props.spot;
     const { num_guests, adults, children, infants, open } = this.state;
     debugger
@@ -335,7 +339,12 @@ class BookingForm extends React.Component{
     
         </form>
       </div>
+    
     )
+
+      }else{
+        return null;
+      }
   }
 }
 
