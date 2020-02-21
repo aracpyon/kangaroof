@@ -21,9 +21,9 @@ function BookingModal(props) {
   // debugger
   const { modal, closeModal } = props;
   const pathname = props.location.pathname;
-  const strInt = pathname.split('')[pathname.length - 1];
+  const strInt = pathname.split('/').pop();
   const spotId = parseInt(strInt);
-  console.log(spotId);
+  
 
   // debugger
   if (!modal) {
