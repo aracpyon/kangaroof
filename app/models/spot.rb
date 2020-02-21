@@ -26,6 +26,7 @@ class Spot < ApplicationRecord
     # debugger
     result = self.where("city LIKE ?", "%#{keyword}%")
                  .or(where("address LIKE ?", "%#{keyword}%"))
+                 .or(where("title LIKE ?", "%#{keyword}%" ))
                  
     # debugger
     return result

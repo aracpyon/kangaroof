@@ -56,7 +56,7 @@ ActiveRecord::Base.transaction do
                       price: 300,
                       description: "Anime NYC is an annual three-day anime convention held during November at the Jacob K. Javits Convention Center in New York City. The convention typically offers arcade games, an artist alley, concerts, manga library (Carolina Manga Library), masquerade, panels, screenings, vendors, and video and card games. Anime NYC offered 100 hours of programming in 2017. Anime NYC's organizer LeftField Media created the New York Comic Con and also runs Washington DC’s Awesome Con.")
   
-  amazon = Spot.create(title: "A Greate Night with The World Biggest Commercial Website",
+  amazon = Spot.create(title: "Amazon: A Great Night with The World Biggest Commercial Website",
                        host_id: albert.id,
                        address: "410 Terry Ave N, Seattle 98109, WA",
                        city: "Seattle",
@@ -93,7 +93,7 @@ ActiveRecord::Base.transaction do
                             )
 
 
-  ts_review1 = Review.create(body: "The iconic Time Square. I have always wanted to go and I achieved my goal to come. There’s so many different                                   apps and restaurants to go to. So many interesting people. It is filled with life. Truly shows that New York is                                   the city that never sleeps.",
+  ts_review1 = Review.create(body: "The iconic Times Square. I have always wanted to go and I achieved my goal to come. There’s so many different                                   apps and restaurants to go to. So many interesting people. It is filled with life. Truly shows that New York is                                   the city that never sleeps.",
                               rating: 4.5,
                               spot_id: timessquare.id,
                               author_id: ara.id)
@@ -116,7 +116,7 @@ ActiveRecord::Base.transaction do
               spot_id: met.id,
               author_id: julian.id)
   met_review2 = Review.create(
-    body: "Great art!  You get to see paintings from some of the greatest in history which is super awesome! Tons to see multiple levels and various forms of art include installations, film and photography.  There is even outdoor area. There are many seating areas and ample staff and security.  The museum is huge with so much to explore. Definitely for the art lover and those interested to learn about art. I was skeptical to pay for entrance but it was WELL worth it, glad I did.  Your pass can also be used at their other location as well. Enjoy!!"
+    body: "Great art!  You get to see paintings from some of the greatest in history which is super awesome! Tons to see multiple levels and various forms of art include installations, film and photography.  There is even outdoor area. There are many seating areas and ample staff and security.  The museum is huge with so much to explore. Definitely for the art lover and those interested to learn about art. I was skeptical to pay for entrance but it was WELL worth it, glad I did.  Your pass can also be used at their other location as well. Enjoy!!",
     rating: 5.0,
     spot_id: met.id,
     author_id: ara.id)

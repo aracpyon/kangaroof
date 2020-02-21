@@ -7,6 +7,7 @@ class SearchIndexItem extends React.Component{
     this.handleClick = this.handleClick.bind(this);
   }
 
+
   handleClick() {
     const spotId = this.props.spot.id
     this.props.history.push(`/spots/${spotId}`);
@@ -15,6 +16,7 @@ class SearchIndexItem extends React.Component{
 
   render(){
     const { title, description, photoUrls, price } = this.props.spot;
+
     return(
       <div className="search-index-items" onClick={this.handleClick}>
         <div className="search-photo-container">
@@ -26,7 +28,7 @@ class SearchIndexItem extends React.Component{
             {/* <span className="search-item-city">{city}</span> */}
             <span className="search-item-rate">
               <img className="item-star" src={window.star} />
-              5.00</span>
+              5.0</span>
           </div>
           <div className="search-item-title">{title}</div>
           <div className="search-item-description">{description}</div>

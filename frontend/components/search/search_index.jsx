@@ -2,6 +2,7 @@ import React from 'react';
 import SearchIndexItem from './search_index_item';
 import SearchMap from '../map/search_map';
 
+
 class SearchIndex extends React.Component{
   constructor(props){
     super(props);
@@ -17,16 +18,19 @@ class SearchIndex extends React.Component{
   componentDidMount(){
     // debugger
     this.props.fetchSearchResult(this.props.searchForm.keyword);
+    
   }
   render(){
     // debugger
     const { spots } = this.props;
+    const placesToStay = spots.length <= 1 ? "Place to stay" : "Places to stay"
+    
     return (
       <div className="search-result-container">
         <div className="search-items-container">
-          <div className="search-items-num">{spots.length} Places to stay</div>
+          <div className="search-items-num">{spots.length} {placesToStay}</div>
           {spots.map(spot => {
-            return <SearchIndexItem spot={spot} key={spot.id}/>
+            return <SearchIndexItem spot={spot} key={spot.id} />
           })
           }
         </div>
