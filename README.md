@@ -9,6 +9,8 @@
 ## Live Demo
 [Live Demo](https://kangaroof.herokuapp.com/) 
 
+## Technologies
+Kangaroof is built with Ruby on Rails and PSQL as backend and JavaScript, React and Redux for frontend. Google Maps JS API is used for rendering maps. Stylings are written predominantly on SCSS and rest on CSS. Kangaroof Live demo is using Heroku for deployment, and static assets are stored in AWS.
 
 ## Features
 
