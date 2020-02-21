@@ -49,7 +49,7 @@ class BookingList extends React.Component {
       </div>
     ) : (
       <div className="no-booking-container">
-        <p className="no-booking-comment">you don't have anything coming up--start exploring idead for your next trip</p>
+        <p className="no-booking-comment">you don't have anything coming up--start exploring ideas for your next trip</p>
         <div>
           <img className="travel" src={window.travel} />
         </div>

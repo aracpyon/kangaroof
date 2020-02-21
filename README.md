@@ -1,50 +1,44 @@
 # Kangaroof 
 
-<img width="632" alt="Screen Shot 2020-02-05 at 1 01 16 PM" src="https://user-images.githubusercontent.com/56740477/73869678-c2a17e80-4818-11ea-9dbe-134b90d385ab.png">
 
 ```Kangaroof``` is an Airbnb clone. It offeres an online marketplace where users can arrange or offer homestays. Hosts(```kangaroo```) post their guest rooms with the information of availability and price. Guests(```joey```) look through the hosting list and find the best place for their taste and rent out the rooms. 
 
-## sketch
-![kangaroof_sketch](https://user-images.githubusercontent.com/56740477/74115225-13e4a180-4b7c-11ea-9e09-1f510064038a.JPG)
+<img width="1423" alt="Screen Shot 2020-02-21 at 11 18 03 AM" src="https://user-images.githubusercontent.com/56740477/75052365-7ce1e880-549d-11ea-9cb3-fecb3d7ab513.png">
+
+
+## Live Demo
+[Live Demo](https://kangaroof.herokuapp.com/) 
 
 
 ## Features
-[MVP List](https://github.com/aracpyon/kangaroof/wiki/MVP-list)
-### 1. New account creation, login, and guest/demo login
-* Users can sign up, sign in, log out
-* Users can use a demo login to try the site
-* Users can't use certain features without logging in (reserve spots & leave reviews)
 
-### 2. Pouches(rooms)
-* has its own profile(host profile)
-* calendar that shows availability & allows Guests(users) to select dates
-* Guests(users) can reserve and arrange dates on profile
+### Spot search with Google Map
 
-### 3. Bookings
-* Reservations are made on Pouch's profile
+<img width="1426" alt="Screen Shot 2020-02-21 at 11 20 34 AM" src="https://user-images.githubusercontent.com/56740477/75052386-8408f680-549d-11ea-8285-eea2589c1cb5.png">
 
-### 4. Reviews
-* Users(guests) can leave reviews
-* Users have to log in to leave reviews
-* Review count is displayed
+On Search Index Page, user can look up spots and locate them on Google Map to visualize it. User can always access to the search bar located on top navigation bar. User can look up spots with any keyword, such as city names, address, and zipcode.
 
-### 5. User Profile
-* shows simple information (public)
-* shows reservations (private)
-* shows spots if User is a host (public)
+### Booking Spots
 
-### 6. Messaging
-* Only Users initiate messaging
-* Hosts and Users can message each other
+<img width="1196" alt="Screen Shot 2020-02-21 at 11 25 16 AM" src="https://user-images.githubusercontent.com/56740477/75052389-84a18d00-549d-11ea-9eaf-dd0915a9f63b.png">
 
-## Pages & Details
- ### -- HomePage (index)
-  * nav: logo, login & logout buttons on nar
-  * Front Image
-  * Dates look up
-### -- Signup & Login Page
-### -- Kangaroo profile
-  * Host profile that shows their guest rooms
+On Spot's profile page, user can access to Booking Modal form by clicking 'Check Availability'. Calendars are interactive; user selects the date on the calendar and chose number of guests on the dropdown choices. 
+
+### User Auth
+
+<img width="716" alt="Screen Shot 2020-02-21 at 11 22 04 AM" src="https://user-images.githubusercontent.com/56740477/75052388-84a18d00-549d-11ea-8a14-838659517f2e.png">
+
+user can signs up or logs in through the top nav bar. It provides modal page of session form. 
+
+* Search spots and filter them on Google Map
+* Look up available dates and book a reservation of staying
+* User can view their booking list
+
+#### extra features
+* spots browsing
+* reviews
+* for more details => [MVP List](https://github.com/aracpyon/kangaroof/wiki/MVP-list)
+
 
 ## Tables & Associations
 * [Schema](https://github.com/aracpyon/kangaroof/wiki/Schema)
@@ -52,4 +46,9 @@
 ## Timeline
 * -- created on Feb 3, 2020
 * -- started on Auth on Feb 10, 2020
+* -- Auth is done on Feb 12, 2020
+* -- Spot Profile on Feb 16, 2020
+* -- Front Page on Feb 16, 2020
+* -- Booking Form on Feb 18, 2020
+* -- Bookin list, maps, reviews on Feb 21, 2020
 

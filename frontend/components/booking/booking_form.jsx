@@ -36,11 +36,9 @@ class BookingForm extends React.Component{
       return "";
     }
 
-    // this.state.startDate ? this.state.startDate.toISOString() : ""
   }
   
   dateTransform(date){
-    //date = "02/10/2020"
     const splited = date.split("/");
     splited.unshift(splited.pop());
     return splited.join("");
