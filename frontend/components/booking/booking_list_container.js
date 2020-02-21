@@ -1,6 +1,6 @@
 import { connect} from 'react-redux';
 import BookingList from './booking_list';
-import { fetchBookings } from '../../actions/booking_actions';
+import { fetchBookings, destroyBooking, updateBooking } from '../../actions/booking_actions';
 import { fetchSpots } from '../../actions/spot_actions';
 
 const mSTP = state => {
@@ -16,7 +16,9 @@ const mDTP = dispatch => {
   // debugger
   return {
     fetchBookings: (currentuserId) => dispatch(fetchBookings(currentuserId)),
-    fetchSpots: () => dispatch(fetchSpots())
+    fetchSpots: () => dispatch(fetchSpots()),
+    destroyBooking: () => dispatch(destroyBooking()),
+    updateBooking: ()
   }
 }
 
