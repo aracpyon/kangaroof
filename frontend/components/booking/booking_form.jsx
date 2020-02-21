@@ -182,9 +182,10 @@ class BookingForm extends React.Component{
   render(){
     const { photoUrls, title, price } = this.props.spot;
     const { num_guests, adults, children, infants, open } = this.state;
-
+    debugger
     let dropdownFlag = open ? dropdownFlag = 'OPEN' : dropdownFlag = ''
-
+    const photo = photoUrls.length > 1 ? photoUrls[1] : photoUrls[0]
+    
     
 
     return (
@@ -222,7 +223,7 @@ class BookingForm extends React.Component{
 
               <div className="head">
                 <div className="thumb-title">
-                  <img className="thumbnail" src={photoUrls[1]} alt="" />
+                  <img className="thumbnail" src={photo} alt="" />
                   <h2 className="spot-title">{title}</h2>
                 </div>
                 <div className="comment" >Add your travel dates for exact pricing</div>

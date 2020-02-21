@@ -6,7 +6,7 @@ import { START_DATE, END_DATE } from 'react-dates/src/constants';
 // import { withRouter } from 'react-router-dom';
 
 const mSTP = (state, ownProps) => {
-  // debugger
+  debugger
   return {
     spot: state.entities.spots[ownProps.spotId],
     booking: {

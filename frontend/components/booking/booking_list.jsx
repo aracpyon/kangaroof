@@ -39,7 +39,7 @@ class BookingList extends React.Component {
 
   render(){
     const { bookings, spots, destroyBooking, user } = this.props;
-    const yesNobookings = bookings && spots ? (
+    const yesNobookings = bookings.length > 0 ? (
       <div className="booking-items-container">
         {
         bookings.map(booking => {
@@ -49,7 +49,7 @@ class BookingList extends React.Component {
       </div>
     ) : (
       <div className="no-booking-container">
-        <p>you don't have anything coming up--start exploring idead for your next trip</p>
+        <p className="no-booking-comment">you don't have anything coming up--start exploring idead for your next trip</p>
         <div>
           <img className="travel" src={window.travel} />
         </div>
