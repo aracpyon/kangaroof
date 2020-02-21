@@ -16,7 +16,8 @@ const mDTP = dispatch => {
   // debugger
   return {
     fetchBookings: (currentuserId) => dispatch(fetchBookings(currentuserId)),
-    fetchSpots: () => dispatch(fetchSpots())
+    fetchSpots: () => dispatch(fetchSpots()),
+    destroyBooking: (bookingId) => dispatch(destroyBooking(bookingId))
   }
 }
 

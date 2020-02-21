@@ -46,17 +46,24 @@ class Api::BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
+    booking = Booking.find(params[:id])
     # debugger
-    if @booking.destroy
+    if booking.destroy
       # redirect_to bookings_url
       # debugger
+      @bookings = if params[:user_id]
+      # debugger
+                Booking.includes(:spot).where(guest_id: params[:user_id])
+              else
+                # debugger
+               Booking.includes(:spot).all
+              end
       render :index
     else
-      # debugger
+      
       render json: ["No booking"], status: 401
     end
-    # render :index
+    
   end
 
   private

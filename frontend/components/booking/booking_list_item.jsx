@@ -5,9 +5,12 @@ class BookingListItem extends React.Component {
   constructor(props){
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
     this.dateFilter = this.dateFilter.bind(this);
     // debugger
   }
+
+
 
   handleClick(){
     // debugger
@@ -22,6 +25,11 @@ class BookingListItem extends React.Component {
       return dateArr.join(".")
 
 
+  }
+  handleDelete(){
+    this.props.destroyBooking(this.props.booking.id);
+    this.props.history.push(`/${this.props.user.id}/bookings`);
+    
   }
 
   render(){
@@ -45,6 +53,7 @@ class BookingListItem extends React.Component {
           </h2>
           <h3>{spot.city}</h3>
           <h3>{spot.title}</h3>
+          <button onClick={this.handleDelete}>cancel</button>
         </div>
         <div className="booking-item-photo">
           <img className="booking-image" src={spot.photoUrls[1]} onClick={this.handleClick}/>

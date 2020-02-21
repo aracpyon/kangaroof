@@ -4,20 +4,46 @@ import BookingListItem from './booking_list_item';
 class BookingList extends React.Component {
   constructor(props){
     super(props);
-    // debugger;
+    this.comparison = this.comparison.bind(this);
   }
   componentDidMount(){
     this.props.fetchBookings(this.props.user.id);
     // this.props.fetchSpots();
   }
 
+  componentDidUpdate(prevProps){
+    const { bookings } = this.props;
+
+    if (this.comparison(bookings, prevProps.bookings)) {
+      this.props.fetchBookings(this.props.user.id);
+    }
+  }
+
+  comparison(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+      // debugger
+      return true
+    } else {
+      arr1.map(el1 => {
+        // debugger
+        arr2.map(el2 => {
+          if (el1 !== el2) {
+            // debugger
+            return true
+          }
+        })
+      })
+      return false;
+    }
+  }
+
   render(){
-    const { bookings, spots } = this.props;
+    const { bookings, spots, destroyBooking, user } = this.props;
     const yesNobookings = bookings && spots ? (
       <div className="booking-items-container">
         {
         bookings.map(booking => {
-          return <BookingListItem booking={booking} key={booking.id} spots={spots} />
+          return <BookingListItem booking={booking} key={booking.id} spots={spots} user={user} destroyBooking={destroyBooking} />
         })
         }
       </div>

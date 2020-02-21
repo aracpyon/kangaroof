@@ -71,6 +71,7 @@ class BookingForm extends React.Component{
                         );
     // debugger
     this.props.action(newBooking);
+    this.props.closeModal();
   }
   
   handleFocus(e){
