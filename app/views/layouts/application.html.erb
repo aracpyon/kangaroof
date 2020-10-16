@@ -8,6 +8,7 @@
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
   <script type="text/javascript">
     window.photowall = "<%= image_url('paris.jpg') %>";
